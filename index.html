@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sophia &amp; Alexander · 19.06.2027</title>
+  <meta name="description" content="Запрошення на весілля Sophia &amp; Alexander — 19 червня 2027 року.">
+  <meta name="theme-color" content="#F6F0E6">
+  <meta property="og:title" content="Sophia &amp; Alexander · 19 · 06 · 2027">
+  <meta property="og:description" content="З любов'ю запрошуємо вас розділити з нами найважливіший день.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Pinyon+Script&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-locked">
+
+  <!-- Reusable monogram -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="goldFoil" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#8E7144"/>
+        <stop offset=".32" stop-color="#D8BE8A"/>
+        <stop offset=".5" stop-color="#F4E7C6"/>
+        <stop offset=".68" stop-color="#BE9D63"/>
+        <stop offset="1" stop-color="#8A6C3E"/>
+      </linearGradient>
+      <symbol id="monogram" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="92" fill="none" stroke="url(#goldFoil)" stroke-width="1"/>
+        <circle cx="100" cy="100" r="86" fill="none" stroke="url(#goldFoil)" stroke-width=".5" stroke-dasharray="1 5"/>
+        <path d="M100 14 l3 4 -3 4 -3 -4z M100 178 l3 4 -3 4 -3 -4z" fill="url(#goldFoil)"/>
+        <text x="80" y="122" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="96" fill="url(#goldFoil)">S</text>
+        <text x="126" y="132" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="88" fill="url(#goldFoil)">A</text>
+        <text x="103" y="148" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="22" fill="url(#goldFoil)">&amp;</text>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ 1. INTRO · ENVELOPE ============ -->
+  <section class="intro" id="intro" aria-label="Запрошення">
+    <div class="intro__glow"></div>
+    <div class="intro__rays" aria-hidden="true"></div>
+    <canvas class="dust-canvas" aria-hidden="true"></canvas>
+    <div class="intro__inner">
+      <p class="intro__kicker">Personal invitation</p>
+
+      <div class="gate" id="envelope" role="button" tabindex="0" aria-label="Відкрити запрошення">
+        <!-- the invitation inside -->
+        <div class="gate__card">
+          <div class="gate__card-in">
+            <span class="eyebrow">Запрошення</span>
+            <span class="gate__script">на весілля</span>
+            <span class="gate__pearls" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="gate__names">Sophia<em>&amp;</em>Alexander</span>
+            <span class="gate__date">19 · 06 · 2027</span>
+          </div>
+        </div>
+
+        <!-- left door -->
+        <div class="door door--l">
+          <div class="door__face door__front">
+            <span class="door__word door__word--top">Sophia</span>
+            <span class="door__word door__word--bottom">19 · 06</span>
+            <span class="door__ribbon"></span>
+          </div>
+          <div class="door__face door__back"></div>
+        </div>
+        <!-- right door -->
+        <div class="door door--r">
+          <div class="door__face door__front">
+            <span class="door__word door__word--top">Alexander</span>
+            <span class="door__word door__word--bottom">2027</span>
+            <span class="door__ribbon"></span>
+          </div>
+          <div class="door__face door__back"></div>
+        </div>
+
+        <div class="seal seal--gate" id="seal">
+          <span class="seal__ring" aria-hidden="true"></span>
+          <svg class="seal__mono" aria-hidden="true"><use href="#monogram"/></svg>
+        </div>
+      </div>
+
+      <div class="intro__meta">
+        <p class="intro__names">Sophia <em>&amp;</em> Alexander</p>
+        <p class="intro__hint"><span>Торкніться перлини, щоб відкрити</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand" aria-label="На початок">
+      <svg><use href="#monogram"/></svg>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Розділи">
+      <a href="#story">Історія</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#details">Деталі</a>
+      <a href="#rsvp" class="nav__cta">RSVP</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="site">
+
+    <!-- ============ 2. HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" style="background-image:url('images/silk-bg.jpg')"></div>
+      <div class="hero__veil"></div>
+      <div class="hero__frame" aria-hidden="true"></div>
+      <div class="pearl-scatter" data-pearls="26" data-seed="11" aria-hidden="true"></div>
+
+      <article class="invite" data-tilt>
+        <div class="invite__paper">
+          <p class="invite__kicker">Запрошення</p>
+          <p class="invite__script">на весілля</p>
+
+          <div class="invite__vellum" aria-hidden="true">
+            <div class="vellum__pearls" data-scatter="16"></div>
+            <div class="seal seal--small">
+              <span class="seal__ring"></span>
+              <svg class="seal__mono"><use href="#monogram"/></svg>
+            </div>
+          </div>
+
+          <h1 class="invite__names">
+            <span class="name">Sophia</span>
+            <span class="amp">&amp;</span>
+            <span class="name">Alexander</span>
+          </h1>
+
+          <div class="invite__date">
+            <span class="line"></span>
+            <time datetime="2027-06-19">19 · 06 · 2027</time>
+            <span class="line"></span>
+          </div>
+          <p class="invite__place">Villa Erba · Lake Como · Italia</p>
+        </div>
+      </article>
+
+      <div class="countdown" id="countdown" aria-label="До весілля залишилось">
+        <div><b data-cd="d">000</b><span>днів</span></div>
+        <i></i>
+        <div><b data-cd="h">00</b><span>годин</span></div>
+        <i></i>
+        <div><b data-cd="m">00</b><span>хвилин</span></div>
+        <i></i>
+        <div><b data-cd="s">00</b><span>секунд</span></div>
+      </div>
+
+      <a href="#story" class="scroll-cue" aria-label="Гортати далі"><span></span></a>
+    </section>
+
+    <!-- ribbon divider -->
+    <div class="ribbon" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="silkGrad" x1="0" x2="1">
+            <stop offset="0" stop-color="#EADCC4"/>
+            <stop offset=".3" stop-color="#FBF6EC"/>
+            <stop offset=".55" stop-color="#E2CFAE"/>
+            <stop offset=".8" stop-color="#FAF4E8"/>
+            <stop offset="1" stop-color="#E6D5B8"/>
+          </linearGradient>
+        </defs>
+        <path class="ribbon__path" d="M0 70 C 240 10, 420 120, 720 64 S 1200 20, 1440 66 L1440 82 C 1200 40, 1000 120, 720 82 S 240 34, 0 88 Z" fill="url(#silkGrad)"/>
+        <path class="ribbon__edge" d="M0 70 C 240 10, 420 120, 720 64 S 1200 20, 1440 66" fill="none" stroke="#C9AE7E" stroke-width=".8"/>
+      </svg>
+    </div>
+
+    <!-- ============ 3. LOVE STORY ============ -->
+    <section class="story" id="story">
+      <div class="pearl-scatter" data-pearls="14" data-seed="23" aria-hidden="true"></div>
+      <header class="section-head reveal">
+        <span class="eyebrow">Chapter one — three</span>
+        <h2 class="section-title">Our <em>Love</em> Story</h2>
+        <p class="section-lead">Історія, яка почалася з випадкової зустрічі й стала найкрасивішою главою нашого життя.</p>
+      </header>
+
+      <article class="chapter">
+        <div class="chapter__media reveal">
+          <figure class="frame frame--tall"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=2400&q=80" data-fallback="images/story-1.jpg" alt="Наречені тримаються за руки" loading="lazy"></figure>
+          <figure class="frame frame--small frame--offset"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=2400&q=80" data-fallback="images/story-4.jpg" alt="Обручки на букеті троянд" loading="lazy"></figure>
+        </div>
+        <div class="chapter__text reveal">
+          <span class="chapter__no">I</span>
+          <span class="eyebrow">Весна 2021 · Відень</span>
+          <h3>Перша зустріч</h3>
+          <p class="dropcap">Ми зустрілися в маленькій кав'ярні біля Опери — Софія шукала вільний столик, Олександр саме його звільняв. Він залишився ще на годину, вона так і не допила свою каву.</p>
+          <p>Того вечора йшов теплий травневий дощ, і жоден із нас не поспішав додому.</p>
+        </div>
+      </article>
+
+      <blockquote class="quote reveal">
+        <span class="quote__mark">“</span>
+        <p>Деякі зустрічі не трапляються випадково — вони просто чекають свого часу.</p>
+        <cite>— Sophia</cite>
+      </blockquote>
+
+      <article class="chapter chapter--reverse">
+        <div class="chapter__media reveal">
+          <figure class="frame frame--wide"><img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=2400&q=80" data-fallback="images/story-2.jpg" alt="Наречені на прогулянці пагорбами" loading="lazy"></figure>
+        </div>
+        <div class="chapter__text reveal">
+          <span class="chapter__no">II</span>
+          <span class="eyebrow">2022 — 2025 · Європа</span>
+          <h3>Наші подорожі</h3>
+          <p class="dropcap">Світанки в Санторіні, нічний Париж, маленькі вулички Порту. Ми колекціонували міста, а насправді — моменти, у яких були тільки ми вдвох.</p>
+          <p>Кожна подорож навчала нас бути командою.</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="chapter__media reveal">
+          <figure class="frame frame--tall frame--arch"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=2400&q=80" data-fallback="images/story-3.jpg" alt="Поцілунок нареченого та нареченої" loading="lazy"></figure>
+        </div>
+        <div class="chapter__text reveal">
+          <span class="chapter__no">III</span>
+          <span class="eyebrow">Грудень 2026 · Комо</span>
+          <h3>«Так»</h3>
+          <p class="dropcap">На березі озера Комо, під першим зимовим сонцем, Олександр опустився на одне коліно. Софія відповіла ще до того, як він встиг договорити.</p>
+          <p>Тепер ми хочемо, щоб найближчі люди були поруч у день, коли почнеться наша нова історія.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ 4. GALLERY ============ -->
+    <section class="gallery" id="gallery">
+      <header class="section-head reveal">
+        <span class="eyebrow">Moments</span>
+        <h2 class="section-title">The <em>Gallery</em></h2>
+        <p class="section-lead">Торкніться фотографії, щоб переглянути її у повному розмірі.</p>
+      </header>
+
+      <div class="gallery__grid" id="galleryGrid">
+        <figure class="g-item g-tall reveal"><img src="https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?auto=format&fit=crop&w=2400&q=80" data-fallback="images/gallery-1.jpg" alt="Наречена у білій сукні" loading="lazy"></figure>
+        <figure class="g-item g-wide reveal"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2400&q=80" data-fallback="images/gallery-2.jpg" alt="Наречений і наречена з букетом" loading="lazy"></figure>
+        <figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1654699991520-aaaf4dd2608b?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1654699991520-aaaf4dd2608b?auto=format&fit=crop&w=2400&q=80" data-fallback="images/gallery-3.jpg" alt="Перлинне намисто" loading="lazy"></figure>
+        <figure class="g-item g-tall reveal"><img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=2400&q=80" data-fallback="images/gallery-4.jpg" alt="Наречені разом" loading="lazy"></figure>
+        <figure class="g-item g-wide reveal"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2400&q=80" data-fallback="images/gallery-5.jpg" alt="Святковий стіл з келихами" loading="lazy"></figure>
+        <figure class="g-item g-tall reveal"><img src="https://images.unsplash.com/photo-1521543832500-49e69fb2bea2?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1521543832500-49e69fb2bea2?auto=format&fit=crop&w=2400&q=80" data-fallback="images/gallery-6.jpg" alt="Наречена з букетом" loading="lazy"></figure>
+        <figure class="g-item g-wide reveal"><img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=2400&q=80" data-fallback="images/gallery-7.jpg" alt="Наречені йдуть полем" loading="lazy"></figure>
+        <figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1400&q=80" data-full="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2400&q=80" data-fallback="images/gallery-8.jpg" alt="Перлини у футлярі" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Перегляд фото" hidden>
+      <button class="lb-btn lb-close" data-lb="close" aria-label="Закрити">✕</button>
+      <button class="lb-btn lb-prev" data-lb="prev" aria-label="Попереднє фото">‹</button>
+      <figure class="lb-stage"><img id="lbImg" src="" alt=""></figure>
+      <button class="lb-btn lb-next" data-lb="next" aria-label="Наступне фото">›</button>
+      <p class="lb-count" id="lbCount">1 / 8</p>
+    </div>
+
+    <!-- Venue band -->
+    <section class="venue-band" aria-label="Місце святкування">
+      <img src="https://images.unsplash.com/photo-1505944357431-27579db47558?auto=format&fit=crop&w=2200&q=80" data-fallback="images/silk-soft.jpg" alt="Озеро на світанку — місце церемонії" loading="lazy">
+      <div class="venue-band__veil"></div>
+      <div class="venue-band__text reveal">
+        <span class="eyebrow eyebrow--light">Lago di Como · Italia</span>
+        <p class="venue-band__title">Where our forever begins</p>
+      </div>
+    </section>
+
+    <!-- ============ 5. WEDDING DETAILS ============ -->
+    <section class="details" id="details">
+      <div class="details__bg" style="background-image:url('images/silk-soft.jpg')"></div>
+      <header class="section-head reveal">
+        <span class="eyebrow">Saturday · 19 June 2027</span>
+        <h2 class="section-title">Wedding <em>Details</em></h2>
+      </header>
+
+      <div class="details__cards">
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="18" cy="26" r="11"/><circle cx="30" cy="26" r="11"/><path d="M21 12l3-5 3 5"/></svg>
+          </span>
+          <span class="eyebrow">Церемонія</span>
+          <p class="card__time">15:00</p>
+          <p class="card__text">Виїзна церемонія в саду<br>з видом на озеро</p>
+        </article>
+        <article class="card card--feature reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 40h32M12 40V22l12-12 12 12v18M20 40V28h8v12"/></svg>
+          </span>
+          <span class="eyebrow">Місце</span>
+          <p class="card__venue">Villa Erba</p>
+          <p class="card__text">Largo Luchino Visconti, 4<br>22012 Cernobbio, Como · Italia</p>
+          <div class="card__actions">
+            <a class="btn btn--gold" href="https://www.google.com/maps/dir/?api=1&destination=Villa+Erba+Cernobbio" target="_blank" rel="noopener">Прокласти маршрут</a>
+            <button class="btn btn--ghost" id="addCalendar" type="button">Додати в календар</button>
+          </div>
+        </article>
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 8h16l-2 14a6 6 0 0 1-12 0zM24 28v12M17 40h14"/></svg>
+          </span>
+          <span class="eyebrow">Банкет</span>
+          <p class="card__time">17:30</p>
+          <p class="card__text">Вечеря при свічках<br>у залі Liberty</p>
+        </article>
+      </div>
+
+      <div class="details__split">
+        <div class="map reveal">
+          <div class="map__frame">
+            <iframe title="Карта: Villa Erba" src="https://www.google.com/maps?q=Villa+Erba,+Cernobbio,+Italy&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="program reveal">
+          <h3 class="sub-title">Програма дня</h3>
+          <ol class="timeline">
+            <li><time>14:30</time><div><b>Зустріч гостей</b><span>Welcome-напої та жива музика</span></div></li>
+            <li><time>15:00</time><div><b>Церемонія</b><span>Найважливіше «так» у саду</span></div></li>
+            <li><time>16:00</time><div><b>Фуршет &amp; фото</b><span>Шампанське на терасі</span></div></li>
+            <li><time>17:30</time><div><b>Святкова вечеря</b><span>Банкет у залі Liberty</span></div></li>
+            <li><time>21:00</time><div><b>Перший танець</b><span>Торт та вечірня програма</span></div></li>
+            <li><time>23:30</time><div><b>Фінал вечора</b><span>Вогні над озером</span></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="dresscode reveal">
+        <h3 class="sub-title">Дрес-код</h3>
+        <p>Black tie optional. Будемо вдячні, якщо ви оберете вбрання у світлих перлинних та теплих нейтральних відтінках.</p>
+        <ul class="swatches">
+          <li style="--c:#FBF8F3"><span>Pearl</span></li>
+          <li style="--c:#F3EADB"><span>Ivory</span></li>
+          <li style="--c:#E7D5B5"><span>Champagne</span></li>
+          <li style="--c:#D6BF9C"><span>Beige</span></li>
+          <li style="--c:#B79A68"><span>Gold</span></li>
+        </ul>
+        <p class="note">Просимо залишити білий колір для нареченої.</p>
+      </div>
+    </section>
+
+    <!-- ============ 6. RSVP ============ -->
+    <section class="rsvp" id="rsvp">
+      <div class="pearl-scatter" data-pearls="18" data-seed="37" aria-hidden="true"></div>
+      <div class="rsvp__bg" style="background-image:url('https://images.unsplash.com/photo-1561848355-890d054dc55a?auto=format&fit=crop&w=2000&q=80'), url('images/silk-soft.jpg')"></div>
+      <div class="rsvp__card reveal">
+        <header class="section-head">
+          <span class="eyebrow">Kindly reply by 1 May 2027</span>
+          <h2 class="section-title"><em>R</em>SVP</h2>
+          <p class="section-lead">Будь ласка, підтвердіть свою присутність до 1 травня 2027 року.</p>
+        </header>
+
+        <form class="form" id="rsvpForm" name="rsvp" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="rsvp">
+          <p class="hidden-field"><label>Не заповнюйте: <input name="bot-field"></label></p>
+
+          <div class="field">
+            <input id="f-name" name="name" type="text" placeholder=" " required autocomplete="name">
+            <label for="f-name">Ваше ім'я та прізвище</label>
+            <small class="err">Будь ласка, вкажіть ім'я</small>
+          </div>
+
+          <fieldset class="choice">
+            <legend>Чи будете ви з нами?</legend>
+            <label class="pearl-radio"><input type="radio" name="attendance" value="yes" required><span class="pr-dot"></span><span>Із радістю прийду</span></label>
+            <label class="pearl-radio"><input type="radio" name="attendance" value="no"><span class="pr-dot"></span><span>На жаль, не зможу</span></label>
+            <small class="err">Оберіть варіант</small>
+          </fieldset>
+
+          <div class="field-row" id="guestsRow">
+            <div class="field">
+              <select id="f-guests" name="guests">
+                <option value="1">1 гість</option>
+                <option value="2">2 гості</option>
+                <option value="3">3 гості</option>
+                <option value="4">4 гості</option>
+              </select>
+              <label for="f-guests" class="is-static">Кількість гостей</label>
+            </div>
+            <div class="field">
+              <select id="f-menu" name="menu">
+                <option value="classic">Класичне меню</option>
+                <option value="fish">Рибне меню</option>
+                <option value="vegetarian">Вегетаріанське</option>
+              </select>
+              <label for="f-menu" class="is-static">Меню</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <textarea id="f-wish" name="message" rows="3" placeholder=" "></textarea>
+            <label for="f-wish">Побажання молодятам</label>
+          </div>
+
+          <button class="btn btn--gold btn--wide" type="submit"><span>Надіслати відповідь</span></button>
+        </form>
+
+        <div class="rsvp__thanks" id="rsvpThanks" hidden>
+          <div class="thanks__pearl" aria-hidden="true"></div>
+          <h3 class="thanks__title">Дякуємо!</h3>
+          <p id="thanksText">Ваша відповідь отримана.</p>
+          <button class="btn btn--ghost" id="rsvpAgain" type="button">Змінити відповідь</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. FINAL ============ -->
+    <section class="final" id="final">
+      <div class="final__bg" style="background-image:url('https://images.unsplash.com/photo-1494955870715-979ca4f13bf0?auto=format&fit=crop&w=2200&q=80'), url('images/silk-bg.jpg')"></div>
+      <div class="final__veil"></div>
+      <div class="pearl-scatter" data-pearls="26" data-seed="51" aria-hidden="true"></div>
+      <div class="final__inner reveal">
+        <svg class="final__mono"><use href="#monogram"/></svg>
+        <p class="final__with">With love,</p>
+        <h2 class="final__names">Sophia <span>&amp;</span> Alexander</h2>
+        <p class="final__date">19 · 06 · 2027</p>
+        <a href="#hero" class="btn btn--ghost btn--small">На початок</a>
+      </div>
+      <footer class="footer">Luxury Pearl Wedding · made with love · photos: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
